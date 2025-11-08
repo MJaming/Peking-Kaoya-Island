@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>🚩🎲🧭 ℘ɛƙıŋɠ'ʂ ƙąơყą ıʂƖąŋɖ❗🏝️🔎</title>
+
+  <!-- H5P Standalone -->
+  <script src="h5p-standalone/main.bundle.js"></script>
+  <link rel="stylesheet" href="h5p-standalone/styles/h5p.css" />
+
+  <!-- Custom title styling -->
+  <style>
+    .game-title {
+      text-align: center;
+      font-family: 'Comic Sans MS', 'Segoe UI Emoji', cursive;
+      font-size: 2.5em;
+      margin-top: 20px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .title-text {
+      color: #ff3333; /* red title */
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Beautiful Title -->
+  <h1 class="game-title">
+    <span>🚩🎲🧭</span>
+    <span class="title-text">℘ɛƙıŋɠ'ʂ ƙąơყą ıʂƖąŋɖ❗</span>
+    <span>🏝️🔎</span>
+  </h1>
+
+  <!-- H5P Container -->
+  <div id="h5p-container"></div>
+
+  <!-- Load H5P Content -->
+  <script>
+    const el = document.getElementById('h5p-container');
+    const options = {
+      h5pJsonPath: "./content/my-content", // path to h5p.json folder
+      frameJs: "h5p-standalone/frame.bundle.js",
+      frameCss: "h5p-standalone/styles/h5p.css",
+      contentUserDataPath: "content" // keep this for local storage
+    };
+
+    new H5PStandalone.H5P(el, options);
+  </script>
+</body>
+</html>
